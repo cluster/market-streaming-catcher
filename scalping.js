@@ -98,9 +98,26 @@ function stream(lightstreamerEndpoint, accountId){
     var subscriptionCandlesMinute = new Subscription(
         "MERGE",
         [
+          "CHART:CS.D.AUDJPY.MINI.IP:1MINUTE",
           "CHART:CS.D.AUDUSD.MINI.IP:1MINUTE",
+          "CHART:CS.D.CADJPY.MINI.IP:1MINUTE",
+          "CHART:CS.D.EURCAD.MINI.IP:1MINUTE",
+          "CHART:CS.D.EURCHF.MINI.IP:1MINUTE",
+          "CHART:CS.D.EURGBP.MINI.IP:1MINUTE",
+          "CHART:CS.D.EURJPY.MINI.IP:1MINUTE",
           "CHART:CS.D.EURUSD.MINI.IP:1MINUTE",
-          "CHART:CS.D.USDJPY.MINI.IP:1MINUTE"
+          "CHART:CS.D.GBPJPY.MINI.IP:1MINUTE",
+          "CHART:CS.D.GBPUSD.MINI.IP:1MINUTE",
+          "CHART:CS.D.USDCAD.MINI.IP:1MINUTE",
+          "CHART:CS.D.USDCHF.MINI.IP:1MINUTE",
+          "CHART:CS.D.USDJPY.MINI.IP:1MINUTE",
+          "CHART:IX.D.CAC.IMF.IP:1MINUTE",
+          "CHART:IX.D.DAX.IFMM.IP:1MINUTE",
+          "CHART:IX.D.DOW.IFE.IP:1MINUTE",
+          "CHART:IX.D.FTSE.IFE.IP:1MINUTE",
+          "CHART:IX.D.NASDAQ.IFE.IP:1MINUTE",
+          "CHART:CS.D.BITCOIN.CFD.IP:1MINUTE",
+          "CHART:CS.D.ETHUSD.CFE.IP:1MINUTE"
         ],
         ["UTM", "OFR_OPEN", "OFR_HIGH", "OFR_LOW", "OFR_CLOSE", "BID_OPEN", "BID_HIGH", "BID_LOW", "BID_CLOSE", "CONS_END", "CONS_TICK_COUNT"] // e.g. {"BID", "OFFER"}
     );
@@ -191,9 +208,27 @@ function stream(lightstreamerEndpoint, accountId){
     var subscriptionTicks = new Subscription(
         "DISTINCT",
         [
+          "CHART:CS.D.AUDJPY.MINI.IP:TICK",
           "CHART:CS.D.AUDUSD.MINI.IP:TICK",
+          "CHART:CS.D.CADJPY.MINI.IP:TICK",
+          "CHART:CS.D.EURCAD.MINI.IP:TICK",
+          "CHART:CS.D.EURCHF.MINI.IP:TICK",
+          "CHART:CS.D.EURGBP.MINI.IP:TICK",
+          "CHART:CS.D.EURJPY.MINI.IP:TICK",
           "CHART:CS.D.EURUSD.MINI.IP:TICK",
-          "CHART:CS.D.USDJPY.MINI.IP:TICK"
+          "CHART:CS.D.GBPJPY.MINI.IP:TICK",
+          "CHART:CS.D.GBPUSD.MINI.IP:TICK",
+          "CHART:CS.D.USDCAD.MINI.IP:TICK",
+          "CHART:CS.D.USDCHF.MINI.IP:TICK",
+          "CHART:CS.D.USDJPY.MINI.IP:TICK",
+          "CHART:IX.D.CAC.IMF.IP:TICK",
+          "CHART:IX.D.DAX.IFMM.IP:TICK",
+          "CHART:IX.D.DOW.IFE.IP:TICK",
+          "CHART:IX.D.FTSE.IFE.IP:TICK",
+          "CHART:IX.D.NASDAQ.IFE.IP:TICK",
+          "CHART:CS.D.BITCOIN.CFD.IP:TICK",
+          "CHART:CS.D.ETHUSD.CFE.IP:TICK"
+
         ],
         ["BID","OFR","UTM"] // e.g. {"BID", "OFFER"}
     );
